@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Inter_Tight } from "next/font/google";
 import { site } from "@/lib/site";
 import "./globals.css";
@@ -28,6 +28,11 @@ export const metadata: Metadata = {
     siteName: site.company,
     type: "website",
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#f7f9fb",
+  colorScheme: "light",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
