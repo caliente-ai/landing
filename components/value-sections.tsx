@@ -92,8 +92,8 @@ export function ValueSections() {
       </section>
 
       {/* 04 / Who it's for */}
-      <section id="who" className="relative px-6 py-24 sm:py-32">
-        <div className="reveal mx-auto max-w-3xl text-center">
+      <section id="who" className="relative py-24 sm:py-32">
+        <div className="reveal mx-auto max-w-3xl px-6 text-center">
           <SectionEyebrow index="04" label="Who it's for" />
           <h2 className="mt-7 font-display font-bold tracking-[-0.02em] text-balance leading-[1.05] text-bone text-[clamp(2rem,4.6vw,3.25rem)]">
             Built for estimating teams that bid to win.
@@ -104,21 +104,9 @@ export function ValueSections() {
             lets up, ProEstimator AI is built to fit the way you already work.
             It will not replace the judgment that wins jobs.
           </p>
-          <div className="mt-9 flex flex-wrap justify-center gap-2.5">
-            {[
-              "General contractors",
-              "Specialty trades",
-              "In-house estimating teams",
-              "Design-build firms",
-            ].map((who) => (
-              <span
-                key={who}
-                className="rounded-full border border-hairline bg-carbon px-4 py-2 text-[13px] text-slate"
-              >
-                {who}
-              </span>
-            ))}
-          </div>
+        </div>
+        <div className="reveal mt-14">
+          <BuiltForMarquee />
         </div>
       </section>
     </>
@@ -185,6 +173,49 @@ function StepCard({
         {title}
       </h3>
       <p className="mt-2 text-[15px] leading-relaxed text-slate">{body}</p>
+    </div>
+  );
+}
+
+/**
+ * Honest auto-scrolling marquee of the contractor segments ProEstimator AI is
+ * built for. These are who the product is *for*, not a claim of customers.
+ */
+const builtFor = [
+  "General contractors",
+  "Specialty trades",
+  "Design-build firms",
+  "In-house estimating teams",
+  "Civil contractors",
+  "Mechanical & electrical",
+  "Concrete & structural",
+  "Preconstruction teams",
+];
+
+function MarqueeRow() {
+  return (
+    <ul className="flex shrink-0 items-center">
+      {builtFor.map((item) => (
+        <li key={item} className="flex items-center">
+          <span className="whitespace-nowrap px-8 font-display text-lg font-semibold text-slate sm:text-xl">
+            {item}
+          </span>
+          <span className="h-1.5 w-1.5 shrink-0 rotate-45 bg-ember" />
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function BuiltForMarquee() {
+  return (
+    <div className="border-y border-hairline py-6" aria-hidden>
+      <div className="marquee-fade relative flex overflow-hidden">
+        <div className="marquee-track flex w-max shrink-0 hover:[animation-play-state:paused]">
+          <MarqueeRow />
+          <MarqueeRow />
+        </div>
+      </div>
     </div>
   );
 }
