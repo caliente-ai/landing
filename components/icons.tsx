@@ -61,24 +61,29 @@ export function AuditIcon({ className = "h-5 w-5" }: IconProps) {
   );
 }
 
-/** Brand mark: a precision crosshair in an ember tile, matching app/icon.svg. */
+/**
+ * Brand mark: a tower crane whose jib is an ember node network. Construction
+ * structure plus connected intelligence, adapted to the Ember dark theme.
+ */
 export function Mark({ className = "h-8 w-8" }: IconProps) {
   return (
-    <span
-      className={`flex shrink-0 items-center justify-center rounded-lg bg-ember ${className}`}
-      aria-hidden
-    >
-      <svg className="h-3/5 w-3/5" viewBox="0 0 24 24" fill="none">
-        <circle cx="12" cy="12" r="7" stroke="#0B0C10" strokeWidth="2.25" />
-        <path
-          d="M12 2.5v4M12 17.5v4M2.5 12h4M17.5 12h4"
-          stroke="#0B0C10"
-          strokeWidth="2.25"
-          strokeLinecap="round"
-        />
-        <circle cx="12" cy="12" r="1.9" fill="#0B0C10" />
-      </svg>
-    </span>
+    <svg className={className} viewBox="0 0 32 32" fill="none" aria-hidden>
+      <g stroke="#F5F3EF" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M8 28.5h8" strokeWidth="2" />
+        <path d="M12 28.5V8" strokeWidth="2" />
+        <path d="M12 8V3.5" strokeWidth="2" />
+        <path d="M12 3.5 30 8" strokeWidth="1.3" opacity="0.6" />
+        <path d="M12 3.5 4 8" strokeWidth="1.3" opacity="0.6" />
+        <path d="M23.5 8v5.5" strokeWidth="1.6" opacity="0.6" />
+      </g>
+      <path d="M4 8h26" stroke="#FF5C35" strokeWidth="2.2" strokeLinecap="round" />
+      <g fill="#FF5C35">
+        <circle cx="4" cy="8" r="2" />
+        <circle cx="12" cy="8" r="2.3" />
+        <circle cx="23.5" cy="8" r="2" />
+        <circle cx="30" cy="8" r="2" />
+      </g>
+    </svg>
   );
 }
 

@@ -19,10 +19,10 @@ export function SiteFooter() {
               <Mark className="h-9 w-9" />
               <div>
                 <p className="font-display text-sm font-semibold tracking-tight text-bone">
-                  {site.product}
+                  {site.company}
                 </p>
                 <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-slate-dim">
-                  from {site.company}
+                  {site.product}
                 </p>
               </div>
             </div>

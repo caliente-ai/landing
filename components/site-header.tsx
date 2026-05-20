@@ -11,11 +11,11 @@ export function SiteHeader() {
         <Link
           href="/"
           className="flex items-center gap-2.5"
-          aria-label={`${site.product} home`}
+          aria-label={`${site.company} home`}
         >
           <Mark className="h-8 w-8" />
           <span className="font-display text-lg font-semibold tracking-tight text-bone">
-            {site.product}
+            {site.company}
           </span>
         </Link>
 
