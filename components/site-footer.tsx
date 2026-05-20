@@ -12,18 +12,24 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-hairline px-6 py-12">
       <div className="mx-auto max-w-6xl">
-        {/* Top row: brand + contact */}
-        <div className="flex flex-col items-center justify-between gap-8 sm:flex-row">
-          <div className="flex items-center gap-3">
-            <Mark className="h-9 w-9" />
-            <div className="text-center sm:text-left">
-              <p className="font-display text-sm font-semibold tracking-tight text-bone">
-                {site.product}
-              </p>
-              <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-slate-dim">
-                from {site.company}
-              </p>
+        {/* Top row: brand + description, then contact */}
+        <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
+          <div className="flex flex-col items-center text-center sm:items-start sm:text-left">
+            <div className="flex items-center gap-3">
+              <Mark className="h-9 w-9" />
+              <div>
+                <p className="font-display text-sm font-semibold tracking-tight text-bone">
+                  {site.product}
+                </p>
+                <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-slate-dim">
+                  from {site.company}
+                </p>
+              </div>
             </div>
+            <p className="mt-4 max-w-xs text-[13px] leading-relaxed text-slate-dim">
+              The agentic takeoff platform for construction estimators. In
+              active development with our first design partners.
+            </p>
           </div>
           <div className="flex flex-col items-center gap-3 sm:items-end">
             <SocialLinks />

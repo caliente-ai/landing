@@ -23,6 +23,13 @@ export const demoVideoUrl: string | null = null;
  * icon on; an empty value renders nothing, so we never ship a dead link.
  */
 export const socials: { linkedin: string; x: string } = {
-  linkedin: "",
-  x: "",
+  linkedin: "https://www.linkedin.com/company/caliente-ai",
+  x: "https://x.com/caliente_ai",
 };
+
+/** Primary navigation, shared by the desktop header and the mobile menu. */
+export const navLinks = [
+  { href: "/#demo", label: "Demo" },
+  { href: "/#how", label: "How it works" },
+  { href: "/#who", label: "Who it’s for" },
+];

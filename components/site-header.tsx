@@ -1,14 +1,8 @@
 import Link from "next/link";
-import { site } from "@/lib/site";
+import { site, navLinks } from "@/lib/site";
 import { Mark } from "@/components/icons";
 import { ButtonLink } from "@/components/button-link";
-
-// Root-relative hrefs so the header works on every page, not just the homepage.
-const navLinks = [
-  { href: "/#demo", label: "Demo" },
-  { href: "/#how", label: "How it works" },
-  { href: "/#who", label: "Who it’s for" },
-];
+import { MobileNav } from "@/components/mobile-nav";
 
 export function SiteHeader() {
   return (
@@ -25,6 +19,7 @@ export function SiteHeader() {
           </span>
         </Link>
 
+        {/* Desktop navigation */}
         <nav className="hidden items-center gap-7 md:flex">
           {navLinks.map((link) => (
             <Link
@@ -37,14 +32,18 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <ButtonLink
-          href="/#partner"
-          variant="primary"
-          size="sm"
-          className="hidden sm:inline-flex"
-        >
-          Become a design partner
-        </ButtonLink>
+        <div className="flex items-center gap-1">
+          <ButtonLink
+            href="/#partner"
+            variant="primary"
+            size="sm"
+            className="hidden md:inline-flex"
+          >
+            Become a design partner
+          </ButtonLink>
+          {/* Hamburger menu, smartphones only */}
+          <MobileNav />
+        </div>
       </div>
     </header>
   );
