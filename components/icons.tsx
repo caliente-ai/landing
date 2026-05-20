@@ -69,22 +69,22 @@ export function PlayIcon({ className = "h-6 w-6" }: IconProps) {
   );
 }
 
-/** Brand mark — a precision crosshair, matching app/icon.svg. */
+/** Brand mark — a precision crosshair in an ember tile, matching app/icon.svg. */
 export function Mark({ className = "h-8 w-8" }: IconProps) {
   return (
     <span
-      className={`flex shrink-0 items-center justify-center rounded-lg bg-primary ${className}`}
+      className={`flex shrink-0 items-center justify-center rounded-lg bg-ember ${className}`}
       aria-hidden
     >
       <svg className="h-3/5 w-3/5" viewBox="0 0 24 24" fill="none">
-        <circle cx="12" cy="12" r="7" stroke="#ffffff" strokeWidth="2" />
+        <circle cx="12" cy="12" r="7" stroke="#0B0C10" strokeWidth="2.25" />
         <path
           d="M12 2.5v4M12 17.5v4M2.5 12h4M17.5 12h4"
-          stroke="#ffffff"
-          strokeWidth="2"
+          stroke="#0B0C10"
+          strokeWidth="2.25"
           strokeLinecap="round"
         />
-        <circle cx="12" cy="12" r="2" fill="#ffffff" />
+        <circle cx="12" cy="12" r="1.9" fill="#0B0C10" />
       </svg>
     </span>
   );

@@ -1,7 +1,13 @@
 import type { Config } from "tailwindcss";
 
-// Design tokens ported from the proestimator-web "Agentic Precision v2.4"
-// design system — kept in lockstep so the landing page and the product cohere.
+/**
+ * "Ember" — the Caliente AI marketing design system.
+ *
+ * A warm ember accent on a cool blueprint-blue + ink foundation: construction's
+ * own colours (hi-vis safety orange + drawing blue), made cinematic. `blueprint`
+ * sits in the same blue family as the product app, tuned brighter for dark UI,
+ * so the app and the marketing cohere. Full spec: BRAND.md
+ */
 const config: Config = {
   content: [
     "./app/**/*.{ts,tsx}",
@@ -11,67 +17,30 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Surface system
-        background: "#f7f9fb",
-        surface: "#ffffff",
-        "surface-container-lowest": "#ffffff",
-        "surface-container-low": "#f2f4f6",
-        "surface-container": "#eceef0",
-        "surface-container-high": "#e6e8ea",
-        "surface-container-highest": "#e0e3e5",
-        "on-surface": "#191c1e",
-        "on-surface-variant": "#434655",
-        "on-background": "#191c1e",
-        outline: "#737686",
-        "outline-variant": "#c3c6d7",
-        "border-subtle": "#e5e7eb",
-
-        // Brand
-        primary: "#2563eb",
-        "on-primary": "#ffffff",
-        "primary-container": "#dbe1ff",
-        "on-primary-container": "#00174b",
-        "inverse-primary": "#b4c5ff",
-
-        // Sidebar (Agentic Navy)
-        "sidebar-navy": "#0f172a",
-        "canvas-white": "#ffffff",
-
-        // Secondary / accent
-        secondary: "#565e74",
-        "secondary-container": "#dae2fd",
-        "on-secondary": "#ffffff",
-        "secondary-fixed-dim": "#bec6e0",
-
-        // Status
-        "success-green": "#16a34a",
-        "warning-amber": "#d97706",
-        "error-red": "#dc2626",
-        error: "#ba1a1a",
-        "error-container": "#ffdad6",
-
-        // Tertiary
-        tertiary: "#943700",
-        "tertiary-container": "#bc4800",
+        ink: "#0B0C10",
+        "ink-deep": "#070708",
+        carbon: "#14161C",
+        "carbon-high": "#1C1F28",
+        ember: "#FF5C35",
+        "ember-bright": "#FF7A57",
+        "ember-deep": "#E0421F",
+        blueprint: "#3B82F6",
+        "blueprint-bright": "#5B9BFF",
+        bone: "#F5F3EF",
+        slate: "#9498A6",
+        "slate-dim": "#7F828E",
+        hairline: "#242732",
+        "hairline-bright": "#343847",
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        display: ["var(--font-inter-tight)", "var(--font-inter)", "system-ui", "sans-serif"],
-        mono: ['"JetBrains Mono"', "monospace"],
-      },
-      fontSize: {
-        "display-hero": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700" }],
-        "display-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "700" }],
-        "headline-lg": ["24px", { lineHeight: "32px", letterSpacing: "-0.02em", fontWeight: "700" }],
-        "headline-md": ["18px", { lineHeight: "24px", fontWeight: "600" }],
-        "headline-sm": ["14px", { lineHeight: "20px", fontWeight: "600" }],
-        "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }],
-        "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }],
-        "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }],
-        "label-sm": ["12px", { lineHeight: "16px", fontWeight: "500" }],
-        "label-caps": ["10px", { lineHeight: "12px", fontWeight: "700", letterSpacing: "0.05em" }],
-        "data-mono": ["13px", { lineHeight: "18px", fontWeight: "500" }],
-        "data-sm": ["11px", { lineHeight: "14px", fontWeight: "500" }],
+        display: [
+          "var(--font-inter-tight)",
+          "var(--font-inter)",
+          "system-ui",
+          "sans-serif",
+        ],
+        mono: ["var(--font-jetbrains-mono)", "ui-monospace", "monospace"],
       },
       borderRadius: {
         DEFAULT: "4px",
@@ -82,31 +51,26 @@ const config: Config = {
         "2xl": "16px",
         "3xl": "24px",
       },
-      spacing: {
-        gutter: "16px",
-        "margin-mobile": "16px",
-        "margin-desktop": "32px",
-      },
       boxShadow: {
-        "ai-glow": "0 0 20px rgba(59, 130, 246, 0.2)",
-        "ai-glow-strong": "0 0 32px rgba(59, 130, 246, 0.35)",
+        "ember-glow": "0 8px 36px -8px rgba(255, 92, 53, 0.5)",
+        depth: "0 40px 120px -40px rgba(0, 0, 0, 0.9)",
       },
       backdropBlur: {
-        glass: "12px",
+        glass: "14px",
       },
       keyframes: {
-        shimmer: {
-          "0%": { backgroundPosition: "200% 0" },
-          "100%": { backgroundPosition: "-200% 0" },
+        "rise-in": {
+          from: { opacity: "0", transform: "translateY(18px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
         },
-        "pulse-subtle": {
-          "0%, 100%": { opacity: "1" },
-          "50%": { opacity: "0.7" },
+        "glow-pulse": {
+          "0%, 100%": { opacity: "0.55" },
+          "50%": { opacity: "1" },
         },
       },
       animation: {
-        shimmer: "shimmer 1.6s linear infinite",
-        "pulse-subtle": "pulse-subtle 2s ease-in-out infinite",
+        "rise-in": "rise-in 0.75s cubic-bezier(0.16, 1, 0.3, 1) both",
+        "glow-pulse": "glow-pulse 4.5s ease-in-out infinite",
       },
     },
   },

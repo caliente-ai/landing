@@ -1,22 +1,21 @@
 import type { ReactNode } from "react";
 
-type Variant = "primary" | "secondary" | "light";
+type Variant = "primary" | "secondary";
 type Size = "sm" | "md";
 
 const variants: Record<Variant, string> = {
-  primary: "bg-primary text-on-primary shadow-sm hover:bg-primary/90",
+  primary: "bg-ember text-ink shadow-ember-glow hover:bg-ember-bright",
   secondary:
-    "border border-outline-variant bg-surface text-on-surface hover:bg-surface-container-low",
-  light: "bg-canvas-white text-sidebar-navy shadow-sm hover:bg-white/90",
+    "border border-hairline-bright bg-white/[0.03] text-bone hover:border-slate-dim hover:bg-white/[0.06]",
 };
 
 const sizes: Record<Size, string> = {
-  sm: "px-4 py-2 text-sm",
+  sm: "px-4 py-2 text-[13px]",
   md: "px-5 py-3 text-[15px]",
 };
 
-/** Anchor styled as a button. The page has no JS interactivity, so every
- *  call to action is a plain link — to an in-page section or a mailto. */
+/** Anchor styled as a button. The page ships zero client JS, so every call to
+ *  action is a plain link — to an in-page section or a mailto. */
 export function ButtonLink({
   href,
   children,
@@ -33,7 +32,7 @@ export function ButtonLink({
   return (
     <a
       href={href}
-      className={`inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-colors ${variants[variant]} ${sizes[size]} ${className}`}
+      className={`inline-flex items-center justify-center gap-2 rounded-xl font-semibold tracking-tight transition-all duration-200 ${variants[variant]} ${sizes[size]} ${className}`}
     >
       {children}
     </a>

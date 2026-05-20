@@ -3,26 +3,28 @@ import { Mark } from "@/components/icons";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border-subtle px-6 py-10">
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 text-center sm:flex-row sm:text-left">
+    <footer className="border-t border-hairline px-6 py-12">
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-8 sm:flex-row">
         <div className="flex items-center gap-3">
           <Mark className="h-9 w-9" />
-          <div>
-            <p className="text-sm font-semibold text-on-background">
+          <div className="text-center sm:text-left">
+            <p className="font-display text-sm font-semibold tracking-tight text-bone">
               {site.product}
             </p>
-            <p className="text-body-sm text-outline">from {site.company}</p>
+            <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-slate-dim">
+              from {site.company}
+            </p>
           </div>
         </div>
-        <div className="flex flex-col items-center gap-1 sm:items-end">
+        <div className="flex flex-col items-center gap-2 sm:items-end">
           <a
             href={`mailto:${site.contactEmail}`}
-            className="text-body-sm text-on-surface-variant transition-colors hover:text-primary"
+            className="text-sm text-slate transition-colors hover:text-ember"
           >
             {site.contactEmail}
           </a>
-          <p className="text-body-sm text-outline">
-            © {new Date().getFullYear()} {site.company}. All rights reserved.
+          <p className="font-mono text-[11px] tracking-[0.1em] text-slate-dim">
+            © {new Date().getFullYear()} {site.company}
           </p>
         </div>
       </div>

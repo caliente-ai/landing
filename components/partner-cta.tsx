@@ -16,32 +16,39 @@ const mailtoHref =
 
 export function PartnerCTA() {
   return (
-    <section id="partner" className="px-6 py-20 sm:py-28">
-      <div className="relative mx-auto max-w-3xl overflow-hidden rounded-3xl border border-border-subtle bg-sidebar-navy px-8 py-14 text-center sm:px-14 sm:py-16">
+    <section id="partner" className="relative px-6 py-24 sm:py-32">
+      <div className="reveal relative mx-auto max-w-4xl overflow-hidden rounded-3xl border border-hairline-bright bg-carbon px-8 py-16 text-center sm:px-16 sm:py-20">
         <div
           aria-hidden
-          className="pointer-events-none absolute left-1/2 top-0 h-72 w-[520px] max-w-[120%] -translate-x-1/2 -translate-y-1/3 rounded-full bg-primary/25 blur-[120px]"
+          className="blueprint-grid fade-radial absolute inset-0 opacity-[0.05]"
         />
-        <p className="relative text-label-caps uppercase tracking-wide text-inverse-primary">
-          Design partners
-        </p>
-        <h2 className="relative mt-4 font-display text-display-lg text-canvas-white text-balance">
-          Want to help shape ProEstimator AI?
-        </h2>
-        <p className="relative mx-auto mt-4 max-w-lg text-body-lg text-secondary-fixed-dim text-pretty">
-          We&rsquo;re working with a small group of estimating teams to build
-          ProEstimator AI around real bid workflows. If that&rsquo;s you, tell
-          us a little about your team — your name, company, and role is plenty
-          to start the conversation.
-        </p>
-        <div className="relative mt-8 flex justify-center">
-          <ButtonLink href={mailtoHref} variant="light">
-            Become a design partner
-          </ButtonLink>
+        <div
+          aria-hidden
+          className="absolute left-1/2 top-0 h-72 w-[680px] max-w-[150%] -translate-x-1/2 -translate-y-1/2 rounded-[50%] bg-ember/25 blur-[120px]"
+        />
+        <div className="relative">
+          <div className="inline-flex items-center gap-2.5 font-mono text-[11px] uppercase tracking-[0.2em] text-ember">
+            <span className="h-1.5 w-1.5 rotate-45 bg-ember" />
+            Design partners
+          </div>
+          <h2 className="mt-6 font-display font-bold tracking-[-0.02em] text-balance leading-[1.05] text-bone text-[clamp(2.1rem,5vw,3.5rem)]">
+            Want to help shape ProEstimator AI?
+          </h2>
+          <p className="mx-auto mt-5 max-w-xl text-pretty text-base leading-relaxed text-slate sm:text-lg">
+            We&rsquo;re working with a small group of estimating teams to build
+            ProEstimator AI around real bid workflows. If that&rsquo;s you, tell
+            us a little about your team — your name, company, and role is plenty
+            to start the conversation.
+          </p>
+          <div className="mt-9 flex justify-center">
+            <ButtonLink href={mailtoHref} variant="primary">
+              Become a design partner
+            </ButtonLink>
+          </div>
+          <p className="mt-5 font-mono text-[11px] uppercase tracking-[0.16em] text-slate-dim">
+            Opens an email to {site.contactEmail}
+          </p>
         </div>
-        <p className="relative mt-4 text-body-sm text-white/45">
-          Opens an email to {site.contactEmail}.
-        </p>
       </div>
     </section>
   );

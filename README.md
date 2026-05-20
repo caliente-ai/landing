@@ -24,5 +24,6 @@ npm start
 Hosted on Vercel, apex domain `caliente-ai.com` (DNS stays on Namecheap).
 See [DEPLOY.md](DEPLOY.md) for the full Vercel + Namecheap runbook.
 
-Design tokens are kept in lockstep with the `proestimator-web` repo
-("Agentic Precision" design system) so the landing page and the product cohere.
+The marketing visual system is **Ember** — see [BRAND.md](BRAND.md) for the
+shareable palette spec. It keeps a blueprint-blue in the product app's blue
+family, so the landing page and ProEstimator AI cohere.

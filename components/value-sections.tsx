@@ -9,16 +9,14 @@ import { DetectIcon, MeasureIcon, AuditIcon } from "@/components/icons";
 export function ValueSections() {
   return (
     <>
-      {/* The problem — manual takeoff pain */}
-      <section className="px-6 py-20 sm:py-24">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-label-caps uppercase tracking-wide text-primary">
-            The problem
-          </p>
-          <h2 className="mt-4 font-display text-display-lg text-on-background text-balance">
+      {/* 01 — The problem (manual takeoff pain) */}
+      <section className="relative px-6 py-24 sm:py-32">
+        <div className="reveal mx-auto max-w-3xl text-center">
+          <SectionEyebrow index="01" label="The problem" />
+          <h2 className="mt-7 font-display font-bold tracking-[-0.02em] text-balance leading-[1.05] text-bone text-[clamp(2rem,4.6vw,3.25rem)]">
             Takeoff still eats your estimators&rsquo; best hours.
           </h2>
-          <p className="mt-5 text-body-lg text-on-surface-variant text-pretty">
+          <p className="mx-auto mt-6 max-w-xl text-pretty text-base leading-relaxed text-slate sm:text-lg">
             Measuring quantities by hand off plan sets is slow, repetitive, and
             easy to get wrong. Every bid cycle, your senior estimators spend
             days counting symbols and tracing areas instead of pricing the work
@@ -28,80 +26,114 @@ export function ValueSections() {
         </div>
       </section>
 
-      {/* What we do — ProEstimator AI */}
-      <section className="border-y border-border-subtle bg-surface px-6 py-20 sm:py-24">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-label-caps uppercase tracking-wide text-primary">
-            What we do
-          </p>
-          <h2 className="mt-4 font-display text-display-lg text-on-background text-balance">
+      {/* 02 — What we do (ProEstimator AI) */}
+      <section className="relative px-6 py-24 sm:py-32">
+        <div className="reveal mx-auto max-w-3xl text-center">
+          <SectionEyebrow index="02" label="What we do" />
+          <h2 className="mt-7 font-display font-bold tracking-[-0.02em] text-balance leading-[1.05] text-bone text-[clamp(2rem,4.6vw,3.25rem)]">
             ProEstimator AI does the measuring. Your estimator stays in command.
           </h2>
-          <p className="mt-5 text-body-lg text-on-surface-variant text-pretty">
+          <p className="mx-auto mt-6 max-w-xl text-pretty text-base leading-relaxed text-slate sm:text-lg">
             Agents work the whole plan set — detecting symbols, tracing
             quantities, and structuring the takeoff inside a canvas your team
-            already knows. Every number traces back to the sheet it came from.
-            It&rsquo;s a faster takeoff with a full audit trail, not a black box.
+            already knows. Every number traces back to the sheet it came from:
+            a faster takeoff with a full audit trail, not a black box.
           </p>
         </div>
-        <div className="mx-auto mt-12 grid max-w-4xl gap-4 sm:grid-cols-3">
-          <Capability
+
+        <div className="mx-auto mt-14 grid max-w-5xl gap-4 sm:grid-cols-3">
+          <CapabilityCard
+            index="A1"
             icon={<DetectIcon />}
-            title="Detects"
+            title="Detect"
             body="Agents find and classify symbols across every sheet in the set."
           />
-          <Capability
+          <CapabilityCard
+            index="A2"
             icon={<MeasureIcon />}
-            title="Measures"
+            title="Measure"
             body="Counts, lengths, and areas captured straight from the plans."
           />
-          <Capability
+          <CapabilityCard
+            index="A3"
             icon={<AuditIcon />}
-            title="Stays accountable"
-            body="Every quantity links back to its sheet, ready for an estimator to review."
+            title="Trace"
+            body="Every quantity links back to the sheet it came from, ready for review."
           />
         </div>
       </section>
 
-      {/* Who it's for */}
-      <section className="px-6 py-20 sm:py-24">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-label-caps uppercase tracking-wide text-primary">
-            Who it&rsquo;s for
-          </p>
-          <h2 className="mt-4 font-display text-display-lg text-on-background text-balance">
+      {/* 03 — Who it's for */}
+      <section className="relative px-6 py-24 sm:py-32">
+        <div className="reveal mx-auto max-w-3xl text-center">
+          <SectionEyebrow index="03" label="Who it's for" />
+          <h2 className="mt-7 font-display font-bold tracking-[-0.02em] text-balance leading-[1.05] text-bone text-[clamp(2rem,4.6vw,3.25rem)]">
             Built for estimating teams that bid to win.
           </h2>
-          <p className="mt-5 text-body-lg text-on-surface-variant text-pretty">
+          <p className="mx-auto mt-6 max-w-xl text-pretty text-base leading-relaxed text-slate sm:text-lg">
             General and specialty contractors whose estimators carry the bid. If
             your team measures takeoff by hand today and the bid calendar never
             lets up, ProEstimator AI is built to fit the way you already work —
             not to replace the judgment that wins jobs.
           </p>
+          <div className="mt-9 flex flex-wrap justify-center gap-2.5">
+            {[
+              "General contractors",
+              "Specialty trades",
+              "In-house estimating teams",
+              "Design-build firms",
+            ].map((who) => (
+              <span
+                key={who}
+                className="rounded-full border border-hairline bg-carbon px-4 py-2 text-[13px] text-slate"
+              >
+                {who}
+              </span>
+            ))}
+          </div>
         </div>
       </section>
     </>
   );
 }
 
-function Capability({
+function SectionEyebrow({ index, label }: { index: string; label: string }) {
+  return (
+    <div className="inline-flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.2em]">
+      <span className="text-ember">{index}</span>
+      <span className="h-px w-7 bg-hairline-bright" />
+      <span className="text-slate">{label}</span>
+    </div>
+  );
+}
+
+function CapabilityCard({
+  index,
   icon,
   title,
   body,
 }: {
+  index: string;
   icon: ReactNode;
   title: string;
   body: string;
 }) {
   return (
-    <div className="rounded-xl border border-border-subtle bg-background p-6 text-left">
-      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-container text-primary">
+    <div className="reveal group relative overflow-hidden rounded-2xl border border-hairline bg-carbon p-7 text-left transition-colors duration-300 hover:border-hairline-bright">
+      <span className="absolute right-5 top-5 font-mono text-[11px] tracking-[0.14em] text-slate-dim">
+        {index}
+      </span>
+      <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-hairline-bright bg-ember/10 text-ember">
         {icon}
       </div>
-      <h3 className="mt-4 text-headline-md text-on-background">{title}</h3>
-      <p className="mt-1.5 text-body-md text-on-surface-variant text-pretty">
-        {body}
-      </p>
+      <h3 className="mt-5 font-display text-xl font-semibold tracking-tight text-bone">
+        {title}
+      </h3>
+      <p className="mt-2 text-[15px] leading-relaxed text-slate">{body}</p>
+      <span
+        aria-hidden
+        className="absolute inset-x-0 bottom-0 h-px origin-left scale-x-0 bg-gradient-to-r from-transparent via-ember to-transparent transition-transform duration-500 group-hover:scale-x-100"
+      />
     </div>
   );
 }
