@@ -10,8 +10,7 @@ export default function PrivacyPage() {
     <LegalPage title="Privacy Policy" updated="May 2026">
       <p>
         This policy explains what happens to your information when you visit{" "}
-        <strong>caliente-ai.com</strong>, the website for ProEstimator AI by
-        Caliente AI.
+        <strong>caliente-ai.com</strong>, the website for Caliente AI.
       </p>
 
       <h2>The short version</h2>
@@ -39,9 +38,9 @@ export default function PrivacyPage() {
       <h2>How we use it</h2>
       <p>
         We use what you send us for one purpose: to reply to you and to consider
-        whether the ProEstimator AI design-partner program is a fit. We do not
-        sell your information, and we do not share it except where it is needed
-        to run our email (Google Workspace).
+        whether the Caliente AI design-partner program is a fit. We do not sell
+        your information, and we do not share it except where it is needed to
+        run our email (Google Workspace).
       </p>
 
       <h2>How long we keep it</h2>

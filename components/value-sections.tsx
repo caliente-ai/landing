@@ -26,12 +26,12 @@ export function ValueSections() {
         </div>
       </section>
 
-      {/* 02 / What we do (ProEstimator AI) */}
+      {/* 02 / What we do */}
       <section className="relative px-6 py-24 sm:py-32">
         <div className="reveal mx-auto max-w-3xl text-center">
           <SectionEyebrow index="02" label="What we do" />
           <h2 className="mt-7 font-display font-bold tracking-[-0.02em] text-balance leading-[1.05] text-bone text-[clamp(2rem,4.6vw,3.25rem)]">
-            ProEstimator AI does the measuring. Your estimator stays in command.
+            Caliente AI does the measuring. Your estimator stays in command.
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-pretty text-base leading-relaxed text-slate sm:text-lg">
             Agents work the whole plan set, detecting symbols, tracing
@@ -76,7 +76,7 @@ export function ValueSections() {
           <StepCard
             step="01"
             title="Drop in the plan set"
-            body="Upload your PDF plan set. ProEstimator AI organizes it sheet by sheet, ready to work."
+            body="Upload your PDF plan set. Caliente AI organizes it sheet by sheet, ready to work."
           />
           <StepCard
             step="02"
@@ -101,8 +101,8 @@ export function ValueSections() {
           <p className="mx-auto mt-6 max-w-xl text-pretty text-base leading-relaxed text-slate sm:text-lg">
             General and specialty contractors whose estimators carry the bid. If
             your team measures takeoff by hand today and the bid calendar never
-            lets up, ProEstimator AI is built to fit the way you already work.
-            It will not replace the judgment that wins jobs.
+            lets up, Caliente AI is built to fit the way you already work. It
+            will not replace the judgment that wins jobs.
           </p>
         </div>
         <div className="reveal mt-14">
@@ -178,7 +178,7 @@ function StepCard({
 }
 
 /**
- * Honest auto-scrolling marquee of the contractor segments ProEstimator AI is
+ * Honest auto-scrolling marquee of the contractor segments Caliente AI is
  * built for. These are who the product is *for*, not a claim of customers.
  */
 const builtFor = [

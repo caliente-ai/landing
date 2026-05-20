@@ -1,5 +1,5 @@
 /**
- * A self-running visualisation of ProEstimator AI working a takeoff. It stands
+ * A self-running visualisation of Caliente AI working a takeoff. It stands
  * in for the demo video (MAR-7) until that ships. Pure SVG + CSS, zero
  * JavaScript: the plan draws itself in, detection boxes lock on, a scan sweeps,
  * and the symbol counter ticks up live (CSS @property counter).

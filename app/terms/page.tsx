@@ -10,15 +10,14 @@ export default function TermsPage() {
     <LegalPage title="Terms of Service" updated="May 2026">
       <p>
         These terms cover your use of <strong>caliente-ai.com</strong>, the
-        website for ProEstimator AI by Caliente AI. By using the site, you agree
-        to them.
+        website for Caliente AI. By using the site, you agree to them.
       </p>
 
       <h2>About this site</h2>
       <p>
-        This website provides general information about ProEstimator AI.
-        ProEstimator AI is in active development, so descriptions on this site
-        reflect our current plans and may change as the product evolves.
+        This website provides general information about Caliente AI. Caliente AI
+        is in active development, so descriptions on this site reflect our
+        current plans and may change as the product evolves.
       </p>
 
       <h2>No guarantees</h2>
@@ -37,9 +36,9 @@ export default function TermsPage() {
 
       <h2>Intellectual property</h2>
       <p>
-        The Caliente AI and ProEstimator AI names, the site design, and all
-        content here belong to Caliente AI. Please do not copy, reproduce, or
-        reuse them without our written permission.
+        The Caliente AI name, the site design, and all content here belong to
+        Caliente AI. Please do not copy, reproduce, or reuse them without our
+        written permission.
       </p>
 
       <h2>Links to other sites</h2>

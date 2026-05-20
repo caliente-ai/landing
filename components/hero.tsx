@@ -10,28 +10,21 @@ export function Hero() {
       <HeroBackdrop />
 
       <div className="relative mx-auto flex max-w-4xl flex-col items-center text-center">
-        <div className="animate-rise-in inline-flex items-center gap-2 rounded-full border border-hairline-bright bg-white/[0.03] px-3.5 py-1.5">
-          <span className="h-1.5 w-1.5 rounded-full bg-ember shadow-[0_0_8px_2px_rgba(255,92,53,0.55)]" />
-          <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-slate">
-            From {site.company}
-          </span>
-        </div>
-
-        <h1 className="animate-rise-in mt-7 font-display font-bold tracking-[-0.03em] text-balance leading-[0.96] text-bone text-[clamp(3rem,9.5vw,6.5rem)] [animation-delay:80ms]">
-          {site.product}
+        <h1 className="animate-rise-in font-display font-bold tracking-[-0.03em] text-balance leading-[0.96] text-bone text-[clamp(3rem,9.5vw,6.5rem)]">
+          {site.name}
         </h1>
 
-        <p className="animate-rise-in mt-6 text-balance font-display leading-[1.18] text-slate text-[clamp(1.35rem,3.6vw,2.05rem)] [animation-delay:160ms]">
+        <p className="animate-rise-in mt-6 text-balance font-display leading-[1.18] text-slate text-[clamp(1.35rem,3.6vw,2.05rem)] [animation-delay:90ms]">
           {site.tagline}
         </p>
 
-        <p className="animate-rise-in mt-6 max-w-xl text-pretty text-base leading-relaxed text-slate [animation-delay:240ms] sm:text-lg">
+        <p className="animate-rise-in mt-6 max-w-xl text-pretty text-base leading-relaxed text-slate [animation-delay:180ms] sm:text-lg">
           The takeoff platform we walked through with you. Agents detect,
           measure, and price straight from your plan sets, with an estimator in
           command of every number.
         </p>
 
-        <div className="animate-rise-in mt-9 flex w-full flex-col items-stretch gap-3 [animation-delay:320ms] sm:w-auto sm:flex-row sm:items-center">
+        <div className="animate-rise-in mt-9 flex w-full flex-col items-stretch gap-3 [animation-delay:270ms] sm:w-auto sm:flex-row sm:items-center">
           <ButtonLink href="#partner" variant="primary">
             Become a design partner
           </ButtonLink>

@@ -17,14 +17,9 @@ export function SiteFooter() {
           <div className="flex flex-col items-center text-center sm:items-start sm:text-left">
             <div className="flex items-center gap-3">
               <Mark className="h-9 w-9" />
-              <div>
-                <p className="font-display text-sm font-semibold tracking-tight text-bone">
-                  {site.company}
-                </p>
-                <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-slate-dim">
-                  {site.product}
-                </p>
-              </div>
+              <p className="font-display text-base font-semibold tracking-tight text-bone">
+                {site.name}
+              </p>
             </div>
             <p className="mt-4 max-w-xs text-[13px] leading-relaxed text-slate-dim">
               The agentic takeoff platform for construction estimators. In
@@ -56,7 +51,7 @@ export function SiteFooter() {
             ))}
           </nav>
           <p className="font-mono text-[11px] tracking-[0.1em] text-slate-dim">
-            © {new Date().getFullYear()} {site.company}
+            © {new Date().getFullYear()} {site.name}
           </p>
         </div>
       </div>

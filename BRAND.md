@@ -11,8 +11,8 @@
 *Caliente* means heat. **Ember** pairs a warm ember accent with a cool
 blueprint-blue over a deep ink foundation: construction's own colours
 (hi-vis safety orange plus drawing blue), made cinematic. The blueprint blue
-sits in the same family as the ProEstimator AI product app, so the app and the
-marketing stay coherent.
+sits in the same family as the product app, so the app and the marketing stay
+coherent.
 
 ## Core palette
 
