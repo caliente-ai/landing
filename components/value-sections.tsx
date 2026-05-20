@@ -27,7 +27,7 @@ export function ValueSections() {
       </section>
 
       {/* 02 — What we do (ProEstimator AI) */}
-      <section className="relative px-6 py-24 sm:py-32">
+      <section id="how" className="relative px-6 py-24 sm:py-32">
         <div className="reveal mx-auto max-w-3xl text-center">
           <SectionEyebrow index="02" label="What we do" />
           <h2 className="mt-7 font-display font-bold tracking-[-0.02em] text-balance leading-[1.05] text-bone text-[clamp(2rem,4.6vw,3.25rem)]">
@@ -64,7 +64,7 @@ export function ValueSections() {
       </section>
 
       {/* 03 — Who it's for */}
-      <section className="relative px-6 py-24 sm:py-32">
+      <section id="who" className="relative px-6 py-24 sm:py-32">
         <div className="reveal mx-auto max-w-3xl text-center">
           <SectionEyebrow index="03" label="Who it's for" />
           <h2 className="mt-7 font-display font-bold tracking-[-0.02em] text-balance leading-[1.05] text-bone text-[clamp(2rem,4.6vw,3.25rem)]">
@@ -119,11 +119,11 @@ function CapabilityCard({
   body: string;
 }) {
   return (
-    <div className="reveal group relative overflow-hidden rounded-2xl border border-hairline bg-carbon p-7 text-left transition-colors duration-300 hover:border-hairline-bright">
+    <div className="reveal group relative overflow-hidden rounded-2xl border border-hairline bg-carbon p-7 text-left transition-all duration-300 hover:-translate-y-1 hover:border-hairline-bright">
       <span className="absolute right-5 top-5 font-mono text-[11px] tracking-[0.14em] text-slate-dim">
         {index}
       </span>
-      <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-hairline-bright bg-ember/10 text-ember">
+      <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-hairline-bright bg-ember/10 text-ember transition-colors duration-300 group-hover:bg-ember/20">
         {icon}
       </div>
       <h3 className="mt-5 font-display text-xl font-semibold tracking-tight text-bone">

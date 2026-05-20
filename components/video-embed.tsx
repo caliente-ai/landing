@@ -1,10 +1,10 @@
 import { site, demoVideoUrl } from "@/lib/site";
-import { PlayIcon } from "@/components/icons";
+import { TakeoffViz } from "@/components/takeoff-viz";
 
 /**
- * Demo video slot, above the fold (MAR-6 / MAR-7), framed as a product window.
- * While `demoVideoUrl` is null it renders a branded placeholder; once the
- * Loom/YouTube embed URL is set in lib/site.ts the live player takes over.
+ * Demo slot, above the fold (MAR-6 / MAR-7), framed as a product window.
+ * While `demoVideoUrl` is null it runs the live TakeoffViz; once the
+ * Loom/YouTube embed URL is set in lib/site.ts the real player takes over.
  */
 export function VideoEmbed() {
   return (
@@ -28,7 +28,7 @@ export function VideoEmbed() {
                 </span>
               </div>
             </div>
-            {/* Video area */}
+            {/* Demo area */}
             <div className="relative aspect-video bg-ink">
               {demoVideoUrl ? (
                 <iframe
@@ -40,41 +40,15 @@ export function VideoEmbed() {
                   loading="lazy"
                 />
               ) : (
-                <DemoPlaceholder />
+                <TakeoffViz />
               )}
             </div>
           </div>
         </div>
         <p className="reveal mt-5 text-center font-mono text-[11px] uppercase tracking-[0.18em] text-slate-dim">
-          A 90-second walkthrough of the takeoff platform
+          Live preview · the full 90-second walkthrough lands here soon
         </p>
       </div>
     </section>
-  );
-}
-
-function DemoPlaceholder() {
-  return (
-    <div className="absolute inset-0 flex flex-col items-center justify-center gap-6 bg-gradient-to-b from-carbon to-ink">
-      <div
-        aria-hidden
-        className="blueprint-grid absolute inset-0 opacity-[0.05]"
-      />
-      <div
-        aria-hidden
-        className="animate-glow-pulse absolute left-1/2 top-1/2 h-52 w-52 -translate-x-1/2 -translate-y-1/2 rounded-full bg-ember/25 blur-3xl"
-      />
-      <div className="relative flex h-[72px] w-[72px] items-center justify-center rounded-full bg-ember text-ink shadow-[0_0_50px_-6px_rgba(255,92,53,0.7)]">
-        <PlayIcon className="ml-1 h-7 w-7" />
-      </div>
-      <div className="relative text-center">
-        <p className="font-display text-lg font-semibold text-bone">
-          {site.product} — product demo
-        </p>
-        <p className="mt-1.5 font-mono text-[11px] uppercase tracking-[0.16em] text-slate">
-          60–90 seconds · coming soon
-        </p>
-      </div>
-    </div>
   );
 }

@@ -8,6 +8,8 @@ import { SiteFooter } from "@/components/site-footer";
 export default function Home() {
   return (
     <>
+      {/* Scroll progress bar (pure CSS, scroll-linked) */}
+      <div className="scroll-progress" aria-hidden />
       {/* Filmic grain over the whole page */}
       <div
         aria-hidden

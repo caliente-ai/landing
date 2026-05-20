@@ -2,6 +2,12 @@ import { site } from "@/lib/site";
 import { Mark } from "@/components/icons";
 import { ButtonLink } from "@/components/button-link";
 
+const navLinks = [
+  { href: "#demo", label: "Demo" },
+  { href: "#how", label: "How it works" },
+  { href: "#who", label: "Who it’s for" },
+];
+
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-hairline/80 bg-ink/70 backdrop-blur-glass">
@@ -16,6 +22,19 @@ export function SiteHeader() {
             {site.product}
           </span>
         </a>
+
+        <nav className="hidden items-center gap-7 md:flex">
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-sm text-slate transition-colors hover:text-bone"
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
+
         <ButtonLink
           href="#partner"
           variant="primary"

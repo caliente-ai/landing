@@ -61,14 +61,6 @@ export function AuditIcon({ className = "h-5 w-5" }: IconProps) {
   );
 }
 
-export function PlayIcon({ className = "h-6 w-6" }: IconProps) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-      <path d="M8 5.5v13a1 1 0 0 0 1.54.84l10-6.5a1 1 0 0 0 0-1.68l-10-6.5A1 1 0 0 0 8 5.5z" />
-    </svg>
-  );
-}
-
 /** Brand mark — a precision crosshair in an ember tile, matching app/icon.svg. */
 export function Mark({ className = "h-8 w-8" }: IconProps) {
   return (
