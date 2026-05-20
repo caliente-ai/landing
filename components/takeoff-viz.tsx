@@ -1,5 +1,5 @@
 /**
- * A self-running visualisation of ProEstimator AI working a takeoff — it stands
+ * A self-running visualisation of ProEstimator AI working a takeoff. It stands
  * in for the demo video (MAR-7) until that ships. Pure SVG + CSS, zero
  * JavaScript: the plan draws itself in, detection boxes lock on, a scan sweeps,
  * and the symbol counter ticks up live (CSS @property counter).
@@ -49,7 +49,7 @@ export function TakeoffViz() {
           </linearGradient>
         </defs>
 
-        {/* Floor plan — draws itself in */}
+        {/* Floor plan, draws itself in */}
         <g
           stroke="#5B9BFF"
           strokeWidth="1.7"
@@ -75,7 +75,7 @@ export function TakeoffViz() {
           fill="url(#viz-scan-grad)"
         />
 
-        {/* Detection boxes — lock on, staggered */}
+        {/* Detection boxes, staggered lock-on */}
         {symbols.map((s) => (
           <g
             key={`${s.x}-${s.y}`}

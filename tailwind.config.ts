@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 /**
- * "Ember" — the Caliente AI marketing design system.
+ * "Ember", the Caliente AI marketing design system.
  *
  * A warm ember accent on a cool blueprint-blue + ink foundation: construction's
  * own colours (hi-vis safety orange + drawing blue), made cinematic. `blueprint`

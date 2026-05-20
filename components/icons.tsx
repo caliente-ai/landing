@@ -1,6 +1,6 @@
 type IconProps = { className?: string };
 
-/** Viewfinder — agents detecting symbols on a sheet. */
+/** Viewfinder: agents detecting symbols on a sheet. */
 export function DetectIcon({ className = "h-5 w-5" }: IconProps) {
   return (
     <svg
@@ -22,7 +22,7 @@ export function DetectIcon({ className = "h-5 w-5" }: IconProps) {
   );
 }
 
-/** Ruler — quantities measured off the plans. */
+/** Ruler: quantities measured off the plans. */
 export function MeasureIcon({ className = "h-5 w-5" }: IconProps) {
   return (
     <svg
@@ -41,7 +41,7 @@ export function MeasureIcon({ className = "h-5 w-5" }: IconProps) {
   );
 }
 
-/** Document with a check — every number traces back to its sheet. */
+/** Document with a check: every number traces back to its sheet. */
 export function AuditIcon({ className = "h-5 w-5" }: IconProps) {
   return (
     <svg
@@ -61,7 +61,7 @@ export function AuditIcon({ className = "h-5 w-5" }: IconProps) {
   );
 }
 
-/** Brand mark — a precision crosshair in an ember tile, matching app/icon.svg. */
+/** Brand mark: a precision crosshair in an ember tile, matching app/icon.svg. */
 export function Mark({ className = "h-8 w-8" }: IconProps) {
   return (
     <span

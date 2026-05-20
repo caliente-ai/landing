@@ -194,6 +194,44 @@ body {
   }
 }
 
+/* Legal / policy pages */
+.legal-prose > * + * {
+  margin-top: 1rem;
+}
+.legal-prose h2 {
+  margin-top: 2.5rem;
+  font-family: var(--font-inter-tight), system-ui, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #f5f3ef;
+}
+.legal-prose p,
+.legal-prose li {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #9498a6;
+}
+.legal-prose ul {
+  padding-left: 1.15rem;
+  list-style: disc;
+}
+.legal-prose li {
+  margin-top: 0.4rem;
+}
+.legal-prose li::marker {
+  color: #ff5c35;
+}
+.legal-prose a {
+  color: #ff5c35;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.legal-prose strong {
+  color: #f5f3ef;
+  font-weight: 600;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

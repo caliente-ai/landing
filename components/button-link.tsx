@@ -15,7 +15,7 @@ const sizes: Record<Size, string> = {
 };
 
 /** Anchor styled as a button. The page ships zero client JS, so every call to
- *  action is a plain link — to an in-page section or a mailto. */
+ *  action is a plain link to an in-page section or a mailto. */
 export function ButtonLink({
   href,
   children,

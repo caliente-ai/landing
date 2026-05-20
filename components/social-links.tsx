@@ -13,7 +13,7 @@ const channels: {
 ];
 
 /** Footer social row. Renders only the channels that have a URL set in
- *  lib/site.ts — an empty list renders nothing, so no dead links ship. */
+ *  lib/site.ts. An empty list renders nothing, so no dead links ship. */
 export function SocialLinks() {
   const live = channels.filter((c) => c.url);
   if (live.length === 0) return null;

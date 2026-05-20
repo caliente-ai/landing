@@ -9,7 +9,7 @@ import { ButtonLink } from "@/components/button-link";
  */
 const mailtoHref =
   `mailto:${site.contactEmail}` +
-  `?subject=${encodeURIComponent("Design partner — ProEstimator AI")}` +
+  `?subject=${encodeURIComponent("Design partner: ProEstimator AI")}` +
   `&body=${encodeURIComponent(
     "Name:\nCompany:\nRole:\n\nA bit about your estimating team:\n",
   )}`;
@@ -37,7 +37,7 @@ export function PartnerCTA() {
           <p className="mx-auto mt-5 max-w-xl text-pretty text-base leading-relaxed text-slate sm:text-lg">
             We&rsquo;re working with a small group of estimating teams to build
             ProEstimator AI around real bid workflows. If that&rsquo;s you, tell
-            us a little about your team — your name, company, and role is plenty
+            us a little about your team. Your name, company, and role is plenty
             to start the conversation.
           </p>
           <div className="mt-9 flex justify-center">

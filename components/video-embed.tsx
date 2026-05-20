@@ -33,7 +33,7 @@ export function VideoEmbed() {
               {demoVideoUrl ? (
                 <iframe
                   src={demoVideoUrl}
-                  title={`${site.product} — product demo`}
+                  title={`${site.product} product demo`}
                   className="absolute inset-0 h-full w-full"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
                   allowFullScreen
