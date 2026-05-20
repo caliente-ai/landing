@@ -1,5 +1,6 @@
 import { site } from "@/lib/site";
 import { Mark } from "@/components/icons";
+import { SocialLinks } from "@/components/social-links";
 
 export function SiteFooter() {
   return (
@@ -16,7 +17,8 @@ export function SiteFooter() {
             </p>
           </div>
         </div>
-        <div className="flex flex-col items-center gap-2 sm:items-end">
+        <div className="flex flex-col items-center gap-3 sm:items-end">
+          <SocialLinks />
           <a
             href={`mailto:${site.contactEmail}`}
             className="text-sm text-slate transition-colors hover:text-ember"
