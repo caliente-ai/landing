@@ -29,7 +29,7 @@ export function Hero() {
             Become a design partner
           </ButtonLink>
           <ButtonLink href="#demo" variant="secondary">
-            Watch the 90-second demo
+            Watch the demo
           </ButtonLink>
         </div>
       </div>

@@ -11,13 +11,6 @@ export const site = {
 } as const;
 
 /**
- * MAR-7 demo video embed URL. Null until the 60-90s walkthrough is published.
- * When it's ready, set this to the Loom/YouTube *embed* URL, and <VideoEmbed>
- * swaps the branded placeholder for the live player with no other change.
- */
-export const demoVideoUrl: string | null = null;
-
-/**
  * Social profiles linked from the footer. Fill in the full URL to switch an
  * icon on; an empty value renders nothing, so we never ship a dead link.
  */

@@ -1,10 +1,10 @@
-import { site, demoVideoUrl } from "@/lib/site";
-import { TakeoffViz } from "@/components/takeoff-viz";
+import { site } from "@/lib/site";
 
 /**
  * Demo slot, above the fold (MAR-6 / MAR-7), framed as a product window.
- * While `demoVideoUrl` is null it runs the live TakeoffViz; once the
- * Loom/YouTube embed URL is set in lib/site.ts the real player takes over.
+ * Plays the self-hosted takeoff-platform walkthrough. The file lives in
+ * public/demo, so the page stays free of third-party players and tracking,
+ * in line with our privacy policy.
  */
 export function VideoEmbed() {
   return (
@@ -30,23 +30,21 @@ export function VideoEmbed() {
             </div>
             {/* Demo area */}
             <div className="relative aspect-video bg-ink">
-              {demoVideoUrl ? (
-                <iframe
-                  src={demoVideoUrl}
-                  title={`${site.name} product demo`}
-                  className="absolute inset-0 h-full w-full"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-                  allowFullScreen
-                  loading="lazy"
-                />
-              ) : (
-                <TakeoffViz />
-              )}
+              <video
+                className="absolute inset-0 h-full w-full object-cover"
+                controls
+                preload="metadata"
+                playsInline
+                poster="/demo/caliente-demo-poster.jpg"
+                aria-label={`${site.name} takeoff platform walkthrough`}
+              >
+                <source src="/demo/caliente-demo.mp4" type="video/mp4" />
+              </video>
             </div>
           </div>
         </div>
         <p className="reveal mt-5 text-center font-mono text-[11px] uppercase tracking-[0.18em] text-slate-dim">
-          Live preview · the full 90-second walkthrough lands here soon
+          The takeoff platform, start to finish
         </p>
       </div>
     </section>

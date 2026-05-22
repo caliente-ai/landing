@@ -64,8 +64,6 @@ target, use the value Vercel displays.
 
 ## Still open
 
-- **Demo video** (MAR-7). Set `demoVideoUrl` in [`lib/site.ts`](lib/site.ts)
-  to the Loom/YouTube embed URL once published; the placeholder swaps itself.
 - **Design-partner form.** Currently a mailto CTA to `hello@caliente-ai.com`.
   Pick a backend (Tally / Formspree / own route) to replace it with an inline
   3-field form.
