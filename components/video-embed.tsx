@@ -5,6 +5,8 @@ import { site } from "@/lib/site";
  * Plays the self-hosted takeoff-platform walkthrough. The file lives in
  * public/demo, so the page stays free of third-party players and tracking,
  * in line with our privacy policy.
+ *
+ * Music: "Horizons" by Alegend, a free-to-use track from freetouse.com.
  */
 export function VideoEmbed() {
   return (
